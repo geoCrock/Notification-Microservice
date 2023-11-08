@@ -2,8 +2,19 @@ FROM python:3.11
 
 WORKDIR /app
 
-RUN pip install -r requirements.txt
+COPY requirements.txt .
+
+RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-CMD["python", "server.py"]
+ENV PORT "PORT"
+ENV DB_URI "DB_URI"
+ENV SMTP_HOST "SMTP_HOST"
+ENV SMTP_PORT "SMTP_PORT"
+ENV SMTP_LOGIN "SMTP_LOGIN"
+ENV SMTP_PASSWORD "SMTP_PASSWORD"
+ENV SMTP_EMAIL "SMTP_EMAIL"
+ENV SMTP_NAME "SMTP_NAME"
+
+CMD ["python", "server.py"]
