@@ -1,16 +1,17 @@
 import os
+from dotenv import load_dotenv
 
+# import env
+load_dotenv()
 
 class Config:
-    PORT = os.getenv("PORT")
-    EMAIL = os.getenv("EMAIL")
-    DB_URI = os.getenv('DB_URL')
-    SMTP_HOST = os.getenv('SMTP_HOST')
-    SMTP_PORT = os.getenv('SMTP_PORT')
-    SMTP_LOGIN = os.getenv('SMTP_LOGIN')
-    SMTP_PASSWORD = os.getenv('SMTP_PASSWORD')
-    SMTP_EMAIL = os.getenv('SMTP_EMAIL')
-    SMTP_NAME = os.getenv('SMTP_NAME')
-
-
-
+    PORT = os.environ.get("PORT")
+    EMAIL = os.environ.get("EMAIL")
+    DB_URI = os.environ.get('DB_URL')
+    SMTP_HOST = os.environ.get('SMTP_HOST')
+    SMTP_PORT = os.environ.get('SMTP_PORT')
+    SMTP_LOGIN = os.environ.get('SMTP_LOGIN')
+    SMTP_PASSWORD = os.environ.get('SMTP_PASSWORD')
+    SMTP_EMAIL = os.environ.get('SMTP_EMAIL')
+    SMTP_NAME = os.environ.get('SMTP_NAME')
+    
