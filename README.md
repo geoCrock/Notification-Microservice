@@ -137,6 +137,35 @@ HTTP 200 Ok
 1. Склонируйте репозиторий:
 
     ```bash
+    git clone https://github.com/geoCrock/Notification-Microservice.git
+    ```
+
+2. Перейдите в директорию проекта:
+
+    ```bash
+    cd Notification-Microservice
+    ```
+
+3. Создайте файл `.env` в корне проекта и укажите необходимые переменные окружения:
+   Указывайте ваши параметры
+   
+5. Запустите main.py в папке app:
+   ```bash
+    cd app
+    ```
+
+   ```bash
+    server.py
+    ```
+   
+
+## Запуск через Docker
+
+Перед запуском не забудьте создать и активировать виртуальное окружение
+
+1. Склонируйте репозиторий:
+
+    ```bash
     git clone https://github.com/geoCrock/AsyncMessagesQueue.git
     ```
 
@@ -149,7 +178,29 @@ HTTP 200 Ok
 3. Создайте файл `.env` в корне проекта и укажите необходимые переменные окружения.
 
 
-## Запуск через Docker
+Убедитесь, что на вашей системе установлены следующие компоненты:
 
-1. Установите зависимости: `pip install -r requirements.txt`
-2. Запустите контейнер Docker: `docker build -t notification-service . && docker run -p 5000:5000 --env-file .env notification-service`
+- Docker
+- Docker Compose
+
+1. Склонируйте репозиторий:
+
+    ```bash
+    git clone https://github.com/geoCrock/Notification-Microservice.git
+    ```
+
+2. Перейдите в директорию проекта:
+
+    ```bash
+    cd Notification-Microservice
+    ```
+
+3. Создайте файл `.env` в корне проекта и укажите необходимые переменные окружения:
+   Указывайте ваши параметры
+
+5. Соберите и запустите Docker-контейнеры:
+
+    ```bash
+    docker-compose up --build
+    ```
+    
